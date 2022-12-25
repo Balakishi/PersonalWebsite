@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MyPersonalBlogModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPersonalBlog.dbo.admin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPersonalBlog.dbo.Bacariqlar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Bacariqlar">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Bacarıq" Type="nvarchar(max)" />
+          <Property Name="Faiz" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPersonalBlog.dbo.Elaqe' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Elaqe">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar(max)" />
+          <Property Name="Mail" Type="nvarchar(max)" />
+          <Property Name="Movzu" Type="nvarchar(max)" />
+          <Property Name="Mesaj" Type="nvarchar(max)" />
+          <Property Name="Tarix" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPersonalBlog.dbo.haqqimda' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="haqqimda">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar(max)" />
+          <Property Name="Soyad" Type="nvarchar(max)" />
+          <Property Name="Telefon" Type="nvarchar(max)" />
+          <Property Name="Mail" Type="nvarchar(max)" />
+          <Property Name="Adress" Type="nvarchar(max)" />
+          <Property Name="Sekil" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPersonalBlog.dbo.Hobbi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Hobbi">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Açıqlama1" Type="nvarchar(max)" />
+          <Property Name="Açıqlama2" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPersonalBlog.dbo.Sertifikatlar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Sertifikatlar">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Açıqlama" Type="nvarchar(max)" />
+          <Property Name="Tarix" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPersonalBlog.dbo.sosyalmedya' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="sosyalmedya">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar(max)" />
+          <Property Name="link" Type="nvarchar(max)" />
+          <Property Name="ikon" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPersonalBlog.dbo.Tecrube' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tecrube">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Başlıq" Type="nvarchar(max)" />
+          <Property Name="Altbaşlıq" Type="nvarchar(max)" />
+          <Property Name="Açıqlama" Type="nvarchar(max)" />
+          <Property Name="Tarix" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MyPersonalBlog.dbo.tehsil' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tehsil">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Başlıq" Type="nvarchar(max)" />
+          <Property Name="Altbaşlıq1" Type="nvarchar(max)" />
+          <Property Name="Altbaşlıq2" Type="nvarchar(max)" />
+          <Property Name="GPU" Type="nvarchar(max)" />
+          <Property Name="Tarix" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="todolist">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tasks" Type="nvarchar(max)" />
+          <Property Name="Deadline" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="MyPersonalBlogModelStoreContainer">
+          <EntitySet Name="todolist" EntityType="Self.todolist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="admin" EntityType="Self.admin" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [admin].[İD] AS [İD], 
+    [admin].[username] AS [username], 
+    [admin].[password] AS [password]
+    FROM [dbo].[admin] AS [admin]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Bacariqlar" EntityType="Self.Bacariqlar" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Bacariqlar].[İD] AS [İD], 
+    [Bacariqlar].[Bacarıq] AS [Bacarıq], 
+    [Bacariqlar].[Faiz] AS [Faiz]
+    FROM [dbo].[Bacariqlar] AS [Bacariqlar]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Elaqe" EntityType="Self.Elaqe" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Elaqe].[İD] AS [İD], 
+    [Elaqe].[AdSoyad] AS [AdSoyad], 
+    [Elaqe].[Mail] AS [Mail], 
+    [Elaqe].[Movzu] AS [Movzu], 
+    [Elaqe].[Mesaj] AS [Mesaj], 
+    [Elaqe].[Tarix] AS [Tarix]
+    FROM [dbo].[Elaqe] AS [Elaqe]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="haqqimda" EntityType="Self.haqqimda" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [haqqimda].[İD] AS [İD], 
+    [haqqimda].[Ad] AS [Ad], 
+    [haqqimda].[Soyad] AS [Soyad], 
+    [haqqimda].[Telefon] AS [Telefon], 
+    [haqqimda].[Mail] AS [Mail], 
+    [haqqimda].[Adress] AS [Adress], 
+    [haqqimda].[Sekil] AS [Sekil]
+    FROM [dbo].[haqqimda] AS [haqqimda]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Hobbi" EntityType="Self.Hobbi" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Hobbi].[İD] AS [İD], 
+    [Hobbi].[Açıqlama1] AS [Açıqlama1], 
+    [Hobbi].[Açıqlama2] AS [Açıqlama2]
+    FROM [dbo].[Hobbi] AS [Hobbi]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Sertifikatlar" EntityType="Self.Sertifikatlar" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Sertifikatlar].[İD] AS [İD], 
+    [Sertifikatlar].[Açıqlama] AS [Açıqlama], 
+    [Sertifikatlar].[Tarix] AS [Tarix]
+    FROM [dbo].[Sertifikatlar] AS [Sertifikatlar]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sosyalmedya" EntityType="Self.sosyalmedya" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sosyalmedya].[ID] AS [ID], 
+    [sosyalmedya].[Ad] AS [Ad], 
+    [sosyalmedya].[link] AS [link], 
+    [sosyalmedya].[ikon] AS [ikon]
+    FROM [dbo].[sosyalmedya] AS [sosyalmedya]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Tecrube" EntityType="Self.Tecrube" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tecrube].[ID] AS [ID], 
+    [Tecrube].[Başlıq] AS [Başlıq], 
+    [Tecrube].[Altbaşlıq] AS [Altbaşlıq], 
+    [Tecrube].[Açıqlama] AS [Açıqlama], 
+    [Tecrube].[Tarix] AS [Tarix]
+    FROM [dbo].[Tecrube] AS [Tecrube]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tehsil" EntityType="Self.tehsil" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tehsil].[İD] AS [İD], 
+    [tehsil].[Başlıq] AS [Başlıq], 
+    [tehsil].[Altbaşlıq1] AS [Altbaşlıq1], 
+    [tehsil].[Altbaşlıq2] AS [Altbaşlıq2], 
+    [tehsil].[GPU] AS [GPU], 
+    [tehsil].[Tarix] AS [Tarix]
+    FROM [dbo].[tehsil] AS [tehsil]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MyPersonalBlogModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="todolist">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tasks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deadline" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Bacariqlar">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Bacarıq" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Faiz" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Elaqe">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Movzu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mesaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tarix" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="haqqimda">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sekil" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Hobbi">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Açıqlama1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Açıqlama2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Sertifikatlar">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Açıqlama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tarix" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sosyalmedya">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ikon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tecrube">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Başlıq" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Altbaşlıq" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Açıqlama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tarix" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tehsil">
+          <Key>
+            <PropertyRef Name="İD" />
+          </Key>
+          <Property Name="İD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Başlıq" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Altbaşlıq1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Altbaşlıq2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GPU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tarix" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="MyPersonalBlogEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="todolist" EntityType="Self.todolist" />
+          <EntitySet Name="admin" EntityType="Self.admin" />
+          <EntitySet Name="Bacariqlar" EntityType="Self.Bacariqlar" />
+          <EntitySet Name="Elaqe" EntityType="Self.Elaqe" />
+          <EntitySet Name="haqqimda" EntityType="Self.haqqimda" />
+          <EntitySet Name="Hobbi" EntityType="Self.Hobbi" />
+          <EntitySet Name="Sertifikatlar" EntityType="Self.Sertifikatlar" />
+          <EntitySet Name="sosyalmedya" EntityType="Self.sosyalmedya" />
+          <EntitySet Name="Tecrube" EntityType="Self.Tecrube" />
+          <EntitySet Name="tehsil" EntityType="Self.tehsil" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MyPersonalBlogModelStoreContainer" CdmEntityContainer="MyPersonalBlogEntities1">
+          <EntitySetMapping Name="todolist">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.todolist">
+              <MappingFragment StoreEntitySet="todolist">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tasks" ColumnName="Tasks" />
+                <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="admin">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.admin">
+              <MappingFragment StoreEntitySet="admin">
+                <ScalarProperty Name="İD" ColumnName="İD" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bacariqlar">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.Bacariqlar">
+              <MappingFragment StoreEntitySet="Bacariqlar">
+                <ScalarProperty Name="İD" ColumnName="İD" />
+                <ScalarProperty Name="Bacarıq" ColumnName="Bacarıq" />
+                <ScalarProperty Name="Faiz" ColumnName="Faiz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Elaqe">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.Elaqe">
+              <MappingFragment StoreEntitySet="Elaqe">
+                <ScalarProperty Name="İD" ColumnName="İD" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Movzu" ColumnName="Movzu" />
+                <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+                <ScalarProperty Name="Tarix" ColumnName="Tarix" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="haqqimda">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.haqqimda">
+              <MappingFragment StoreEntitySet="haqqimda">
+                <ScalarProperty Name="İD" ColumnName="İD" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Sekil" ColumnName="Sekil" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hobbi">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.Hobbi">
+              <MappingFragment StoreEntitySet="Hobbi">
+                <ScalarProperty Name="İD" ColumnName="İD" />
+                <ScalarProperty Name="Açıqlama1" ColumnName="Açıqlama1" />
+                <ScalarProperty Name="Açıqlama2" ColumnName="Açıqlama2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sertifikatlar">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.Sertifikatlar">
+              <MappingFragment StoreEntitySet="Sertifikatlar">
+                <ScalarProperty Name="İD" ColumnName="İD" />
+                <ScalarProperty Name="Açıqlama" ColumnName="Açıqlama" />
+                <ScalarProperty Name="Tarix" ColumnName="Tarix" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sosyalmedya">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.sosyalmedya">
+              <MappingFragment StoreEntitySet="sosyalmedya">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="ikon" ColumnName="ikon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tecrube">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.Tecrube">
+              <MappingFragment StoreEntitySet="Tecrube">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Başlıq" ColumnName="Başlıq" />
+                <ScalarProperty Name="Altbaşlıq" ColumnName="Altbaşlıq" />
+                <ScalarProperty Name="Açıqlama" ColumnName="Açıqlama" />
+                <ScalarProperty Name="Tarix" ColumnName="Tarix" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tehsil">
+            <EntityTypeMapping TypeName="MyPersonalBlogModel.tehsil">
+              <MappingFragment StoreEntitySet="tehsil">
+                <ScalarProperty Name="İD" ColumnName="İD" />
+                <ScalarProperty Name="Başlıq" ColumnName="Başlıq" />
+                <ScalarProperty Name="Altbaşlıq1" ColumnName="Altbaşlıq1" />
+                <ScalarProperty Name="Altbaşlıq2" ColumnName="Altbaşlıq2" />
+                <ScalarProperty Name="GPU" ColumnName="GPU" />
+                <ScalarProperty Name="Tarix" ColumnName="Tarix" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
