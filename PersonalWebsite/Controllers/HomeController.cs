@@ -11,11 +11,36 @@ namespace PersonalWebsite.Controllers
     {
         // GET: Home
         MyPersonalBlogEntities1 db = new MyPersonalBlogEntities1();
-        public ActionResult HomePage()
+      
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult SoftSkills()
+        {
+            return View();
+        }
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult JobEducation()
+        {
+            return View();
+        }
+        public ActionResult Todolist()
         {
             var model = db.todolist.ToList();
             return View(model);
         }
+
         [HttpGet]
         public ActionResult New()
         {
@@ -24,7 +49,7 @@ namespace PersonalWebsite.Controllers
         }
 
         [HttpPost]
-        public ActionResult Yeni(todolist list)
+        public ActionResult New(todolist list)
         {
             if (list.ID == 0) //for insert
             {
@@ -41,7 +66,7 @@ namespace PersonalWebsite.Controllers
             }
 
             db.SaveChanges();
-            return RedirectToAction("HomePage", "Home");
+            return RedirectToAction("Todolist", "Home");
         }
 
         public ActionResult Update(int id)
@@ -63,7 +88,7 @@ namespace PersonalWebsite.Controllers
             }
             db.todolist.Remove(delete);
             db.SaveChanges();
-            return RedirectToAction("HomePage", "Home");
+            return RedirectToAction("Todolist", "Home");
         }
 
 
