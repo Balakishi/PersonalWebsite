@@ -8,11 +8,11 @@
 <div class="container">
     @using (Html.BeginForm("New", "Home", FormMethod.Post))
     {
-        <div class="form-group">
-            @Html.LabelFor(m => m.Tasks)
+        <div class="form-group" style="margin: 20px 0">
+            @Html.LabelFor(m => m.Tasks, new { @class="text-primary", @style="font-weight: 500; font-size: 22px" })
             @Html.TextBoxFor(m => m.Tasks, new { @class = "form-control" })
         </div>
         @Html.HiddenFor(m => m.ID)
-        <button type="submit" class="btn btn-success">Click</button>
+        <button type="submit" class="btn btn-success">Save</button>
     }
 </div>
